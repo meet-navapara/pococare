@@ -1,0 +1,66 @@
+.div
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+.pressure
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 230px;
+    background-color: lightpink;
+    height: 40px;
+    border-radius: 5px;
+    
+}
+.pressure .span
+{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.humidity
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 230px;
+    background-color: rgb(245, 182, 255);
+    height: 40px;
+    border-radius: 5px;
+    
+}
+.humidity .span
+{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.feels_like 
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 230px;
+    background-color: rgb(182, 220, 255);
+    height: 40px;
+    border-radius: 5px;
+    
+}
+.feels_like  .span
+{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+}
