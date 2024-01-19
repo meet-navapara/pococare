@@ -152,7 +152,9 @@ function WeatherData() {
          }
       }
     })
-    console.log(feels_like);
+  
+
+    
 
 
   function SubmitData(e)

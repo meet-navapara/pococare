@@ -6,15 +6,15 @@ import Chart from 'chart.js/auto';
 const Graph = ({graphdata}) => {
   let [GraphData,setGraphData] = useState([])
    
-    console.log(graphdata[0]?.dt_txt.slice(11));
+  
 useEffect(()=>{
-  console.log("object");
+
   if(graphdata[0]?.dt_txt.slice(11)==="00:00:00")
   {
     setGraphData(graphdata)
   }
 })
-   console.log(GraphData);
+ 
     let time=GraphData.map((data)=>{
         return data.dt_txt.slice(11,16)
     })

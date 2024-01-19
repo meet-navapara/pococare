@@ -3,7 +3,7 @@ import style from '../css/weatherDetails.module.css'
 
 function WeatherDetails({pressure,Humidity,feelslike}) {
  
-    console.log(pressure);
+
     return (
         <div className={style.div}>
             <div className={style.pressure}>
