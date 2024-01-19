@@ -182,6 +182,8 @@ function WeatherData() {
       <input type="text" placeholder="Search.." name="search" onChange={getData}/>
       <button type="submit">Search</button>
     </form>
+
+    <h1 style={{marginLeft:"7%",marginTop:"4%"}}>City : {cityName}</h1>
              <div style={{display:"flex",justifyContent:"space-around" }}>
             {
                 day.map((day,index)=>{
@@ -196,6 +198,7 @@ function WeatherData() {
                 })
             }
             </div>
+            <h1 style={{marginLeft:"7%",marginTop:"4%"}}>Current Weather Details</h1>
             <WeatherDetails pressure={pressure[Object.keys(pressure)[0]]} Humidity={Humidity[Object.keys(Humidity)[0]]} feelslike={feels_like[Object.keys(feels_like)[0]]}/>
             <Graph graphdata={ChartData} />
             
