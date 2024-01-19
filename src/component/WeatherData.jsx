@@ -41,15 +41,15 @@ function WeatherData() {
 
    let   HighArray=[]
   
-    for(let meet in list){
+    for(let i in list){
     let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
     let date=new Date(item)
 
      
-       if(list[meet].dt_txt.slice(0,11) == item)
+       if(list[i].dt_txt.slice(0,11) == item)
        {
         let key=d[date.getDay()]
-        HighArray.push(list[meet].main.temp_max)
+        HighArray.push(list[i].main.temp_max)
         High_temp={...High_temp ,[key]:HighArray}
        }
     }
@@ -60,15 +60,15 @@ function WeatherData() {
  
     let   LowArray=[]
    
-     for(let meet in list){
+     for(let i in list){
      let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
      let date=new Date(item)
  
       
-        if(list[meet].dt_txt.slice(0,11) == item)
+        if(list[i].dt_txt.slice(0,11) == item)
         {
          let key=d[date.getDay()]
-         LowArray.push(list[meet].main.temp_min)
+         LowArray.push(list[i].main.temp_min)
          Low_temp={...Low_temp ,[key]:LowArray}
         }
      }
@@ -80,15 +80,15 @@ function WeatherData() {
  
     let   weatherArray=[]
    
-     for(let meet in list){
+     for(let i in list){
      let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
      let date=new Date(item)
  
       
-        if(list[meet].dt_txt.slice(0,11) == item)
+        if(list[i].dt_txt.slice(0,11) == item)
         {
          let key=d[date.getDay()]
-         weatherArray.push(list[meet].weather[0].main)
+         weatherArray.push(list[i].weather[0].main)
          weather={...weather ,[key]:weatherArray}
         }
      }
@@ -99,15 +99,15 @@ function WeatherData() {
  
     let   pressureArray=[]
    
-     for(let meet in list){
+     for(let i in list){
      let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
      let date=new Date(item)
  
       
-        if(list[meet].dt_txt.slice(0,11) == item)
+        if(list[i].dt_txt.slice(0,11) == item)
         {
          let key=d[date.getDay()]
-         pressureArray.push(list[meet].main.pressure)
+         pressureArray.push(list[i].main.pressure)
          pressure={...pressure ,[key]:pressureArray}
         }
      }
@@ -119,15 +119,15 @@ function WeatherData() {
   
      let   HumidityArray=[]
     
-      for(let meet in list){
+      for(let i in list){
       let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
       let date=new Date(item)
   
        
-         if(list[meet].dt_txt.slice(0,11) == item)
+         if(list[i].dt_txt.slice(0,11) == item)
          {
           let key=d[date.getDay()]
-          HumidityArray.push(list[meet].main.humidity)
+          HumidityArray.push(list[i].main.humidity)
           Humidity={...Humidity ,[key]:HumidityArray}
          }
       }
@@ -139,15 +139,15 @@ function WeatherData() {
   
      let   feels_likeArray=[]
     
-      for(let meet in list){
+      for(let i in list){
       let d=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
       let date=new Date(item)
   
        
-         if(list[meet].dt_txt.slice(0,11) == item)
+         if(list[i].dt_txt.slice(0,11) == item)
          {
           let key=d[date.getDay()]
-          feels_likeArray.push(list[meet].main.feels_like)
+          feels_likeArray.push(list[i].main.feels_like)
           feels_like={...feels_like ,[key]:feels_likeArray}
          }
       }
