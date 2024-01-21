@@ -4,21 +4,16 @@ import Chart from 'chart.js/auto';
 
 
 const Graph = ({graphdata}) => {
-  let [GraphData,setGraphData] = useState([])
+  console.log(graphdata);
+ 
    
   
-useEffect(()=>{
 
-  if(graphdata[0]?.dt_txt.slice(11)==="00:00:00")
-  {
-    setGraphData(graphdata)
-  }
-})
  
-    let time=GraphData.map((data)=>{
+    let time=graphdata.map((data)=>{
         return data.dt_txt.slice(11,16)
     })
-    let temp=GraphData.map((data)=>{
+    let temp=graphdata.map((data)=>{
         return data.main.temp-273.15
     })
     
