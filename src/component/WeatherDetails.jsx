@@ -2,7 +2,7 @@ import React from 'react';
 import style from '../css/weatherDetails.module.css'
 
 function WeatherDetails({pressure,Humidity,feelslike}) {
- 
+ console.log(pressure);
 
     return (
         <div className={style.div}>
@@ -11,7 +11,7 @@ function WeatherDetails({pressure,Humidity,feelslike}) {
                     Pressure
                 </span>
                 <span>
-                    {pressure} hpa
+                    {pressure && pressure[0]} hpa
                 </span>
             </div>
             <div className={style.humidity}>
@@ -19,7 +19,7 @@ function WeatherDetails({pressure,Humidity,feelslike}) {
                     Humidity
                 </span>
                 <span>
-                    {Humidity}% 
+                    {Humidity && Humidity[0]}% 
                 </span>
             </div>
             <div className={style.feels_like}>
@@ -27,11 +27,11 @@ function WeatherDetails({pressure,Humidity,feelslike}) {
                 Feels_like
                 </span>
                 <span>
-                    {(feelslike-273.15).toString().slice(0,5)}
+                    {feelslike && (feelslike[0]-273.15).toString().slice(0,5)}
                 </span>
             </div>
         </div>
     );
 }
 
-export default WeatherDetails;
+export default React.memo(WeatherDetails);
